@@ -2,7 +2,7 @@ import React from "react";
 import { Typography } from "@material-tailwind/react";
 
 const ContentMargin = ({ children }) => {
-  return <div className="mx-40 border border-red-900">{children}</div>;
+  return <div className="mx-40">{children}</div>;
 };
 
 const TitleHolder = ({ children, isContactPage }) => {

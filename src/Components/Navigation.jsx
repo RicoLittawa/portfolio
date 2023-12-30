@@ -4,7 +4,7 @@ import Palette from '../assets/palette.png'
 
 const Navigation = () => {
   return (
-    <nav className='border border-red-900 flex justify-evenly'>
+    <nav className='flex justify-evenly'>
         {/* <img src={Palette} alt="" /> */}
         <img src={Logo}  width={80} className='cursor-pointer border-red-900' alt="logo" />
         <ul className='flex text-white justify-center p-5 my-3 font-semibold text-sm'>

@@ -46,7 +46,7 @@ const ServicesPage = () => {
                     <img
                       className="h-40 w-96 rounded-lg "
                       src={picture}
-                      alt="picture"
+                      alt={serviceName}
                     />
                     <Typography
                       as="caption"
