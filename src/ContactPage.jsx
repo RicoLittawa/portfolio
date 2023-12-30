@@ -1,11 +1,11 @@
 import React from "react";
-import {ContentMargin,TitleHolder} from "./Components/ContentComp";
+import { ContentMargin, TitleHolder } from "./Components/ContentComp";
 
 const ContactPage = () => {
   return (
-    <section className="py-20 bg-highlight">
+    <section className="bg-highlight py-20">
       <ContentMargin>
-        <div>This is contact</div>
+        <TitleHolder isContactPage={true}>Contact Me</TitleHolder>
       </ContentMargin>
     </section>
   );

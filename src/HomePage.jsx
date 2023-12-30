@@ -13,8 +13,8 @@ const HomePage = () => {
       <HeroPage />
       <AboutMe />
       <SkillsPage/>
-      <ServicesPage/>
       <PortfolioPage/>
+      <ServicesPage/>
       <ContactPage/>
     </MainStyleProvider>
   );

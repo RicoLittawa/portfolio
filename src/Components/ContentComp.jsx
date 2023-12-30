@@ -1,16 +1,18 @@
 import React from "react";
-import { Typography } from '@material-tailwind/react'
+import { Typography } from "@material-tailwind/react";
 
 const ContentMargin = ({ children }) => {
   return <div className="mx-40 border border-red-900">{children}</div>;
 };
 
-const TitleHolder = ({ children }) => {
+const TitleHolder = ({ children, isContactPage }) => {
   return (
     <>
       <Typography
         variant="h3"
-        className=" text-center font-700  tracking-wide text-highlight"
+        className={`text-center font-700  tracking-wide ${
+          isContactPage ? "text-white" : "text-highlight"
+        }`}
       >
         {children}
       </Typography>

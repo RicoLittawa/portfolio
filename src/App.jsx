@@ -6,8 +6,7 @@ import {
   createBrowserRouter,
 } from "react-router-dom";
 import HomePage from "./HomePage";
-import Pallette from "./assets/palette.png";
-
+import ContactPage from "./ContactPage";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -23,8 +22,10 @@ export default function App() {
 }
 
 function Root() {
-  return;
-  <Routes>
-    <Route path="" element={{}}></Route>
-  </Routes>;
+  return (
+    <Routes>
+      <Route path="" element={{}}></Route>
+      <Route path="/contact" element={{ ContactPage }}></Route>
+    </Routes>
+  );
 }
