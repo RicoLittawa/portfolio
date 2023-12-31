@@ -49,20 +49,16 @@ const ServicesPage = () => {
                       alt={serviceName}
                     />
                     <Typography
-                      as="caption"
-                      variant="small"
-                      className="mt-2 text-center font-normal"
+                      variant="paragraph"
+                      className="mt-2 text-center font-700 text-highlight"
                     >
-                      <Typography
-                        variant="paragraph"
-                        className="mt-2 font-700 text-highlight"
-                      >
-                        {serviceName}
-                      </Typography>
+                      {serviceName}
                     </Typography>
                   </figure>
                   <div className="mt-5">
-                    <Typography variant="small" className="font-400 text-white">{description}</Typography>
+                    <Typography variant="small" className="font-400 text-white">
+                      {description}
+                    </Typography>
                   </div>
                 </li>
               );

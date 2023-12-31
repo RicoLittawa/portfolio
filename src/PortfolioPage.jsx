@@ -53,7 +53,7 @@ const PortfolioPage = () => {
     },
     {
       "Movie Reservation App": {
-        skills: ["MySQL", "Bootstrap", "PHP","Codeigniter "],
+        skills: ["MySQL", "Bootstrap", "PHP", "Codeigniter"],
         description:
           "Users can book a seat using this movie reservation app. Users can also view the seats that are available.This app allows users to reserve a seat. Users may also view the available seats",
       },
@@ -92,19 +92,21 @@ const PortfolioPage = () => {
                   <Typography variant="small" className="font-400">
                     {description}
                   </Typography>
-                  <ul className="mt-3 grid grid-cols-3">
-                    {skills &&
-                      skills.map((skill, index) => (
-                        <li key={index} className="px-1">
-                          <Typography
-                            variant="small"
-                            className="font-400 text-highlight"
-                          >
-                            #{skill}
-                          </Typography>
-                        </li>
-                      ))}
-                  </ul>
+                  <div className="ml-3">
+                    <ul className="mt-3 grid list-disc grid-cols-3 gap-1">
+                      {skills &&
+                        skills.map((skill, index) => (
+                          <li key={index}>
+                            <Typography
+                              variant="small"
+                              className="font-400 text-highlight"
+                            >
+                              {skill}
+                            </Typography>
+                          </li>
+                        ))}
+                    </ul>
+                  </div>
                 </CardBody>
               </Card>
             );
