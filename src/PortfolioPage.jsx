@@ -71,7 +71,7 @@ const PortfolioPage = () => {
     <section className="bg-dark py-20">
       <ContentMargin>
         <TitleHolder>Portfolio</TitleHolder>
-        <div className="grid grid-cols-3 gap-5 py-16">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 py-16">
           {projects.map((project, index) => {
             const [projectName, details] = Object.entries(project)[0];
             const { skills, description } = details || {};
@@ -84,7 +84,7 @@ const PortfolioPage = () => {
                   <img
                     src={picture[projectName]}
                     alt=""
-                    className="h-60 w-full rounded-lg object-cover object-center shadow-md shadow-red-600"
+                    className="h-60 w-full rounded-lg object-cover object-center shadow-md shadow-red-600 hidden lg:block"
                   />
                   <Typography variant="h5" className="mt-5 font-700 text-white">
                     {projectName}

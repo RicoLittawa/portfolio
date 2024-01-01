@@ -4,6 +4,7 @@ import Lottie from "lottie-web";
 import { useEffect, useRef, useState } from "react";
 import AnimatedData from "./assets/Animation - 1703836142406.json";
 import { ContentMargin } from "./Components/ContentComp";
+import Developer from "./assets/developer.svg";
 
 const HeroPage = () => {
   const containerRef = useRef(null);
@@ -33,10 +34,10 @@ const HeroPage = () => {
 
   return (
     <>
-      <section className="pb-20 pt-10">
+      <section className="py-20">
         <ContentMargin>
-          <div className="flex justify-between">
-            <div className="py-40">
+          <div className="hidden justify-between lg:flex">
+            <div className="py-20 lg:py-40">
               <Typography
                 variant="h1"
                 className="first-title text-start font-700 text-lightgray"
@@ -57,7 +58,30 @@ const HeroPage = () => {
                 )}
               </Typography>
             </div>
-            <div ref={containerRef} className="w-96"></div>
+            <div ref={containerRef} className="hidden w-96 lg:flex"></div>
+          </div>
+          <div className="flex justify-center lg:justify-evenly py-24 md:py-32 lg:hidden">
+            <div className="animate-pulse">
+              <Typography
+                variant="h3"
+                className="font-700 tracking-wide text-lightgray"
+              >
+                Hello!
+              </Typography>
+              <Typography
+                variant="h3"
+                className="font-900 tracking-wide text-white indent-1"
+              >
+                I'm a WEB DEVELOPER<span className="text-highlight">.</span>
+              </Typography>
+            </div>
+            <div>
+              <img
+                src={Developer}
+                alt=""
+                className="hidden h-36 w-96 md:flex"
+              />
+            </div>
           </div>
         </ContentMargin>
       </section>

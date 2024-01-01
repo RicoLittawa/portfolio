@@ -1,5 +1,5 @@
 import React from "react";
-import {ContentMargin,TitleHolder} from "./Components/ContentComp";
+import { ContentMargin, TitleHolder } from "./Components/ContentComp";
 import {
   Card,
   CardHeader,
@@ -17,9 +17,9 @@ const AboutMe = () => {
   return (
     <section className="bg-dark py-20">
       <ContentMargin>
-       <TitleHolder>About Me</TitleHolder>
-        <div className="flex justify-evenly py-16">
-          <div className="relative">
+        <TitleHolder>About Me</TitleHolder>
+        <div className="flex justify-center xl:justify-between py-16">
+          <div className="relative hidden xl:block">
             <div className="square absolute inset-0 left-8 top-14"></div>
             <img
               src={Profile}
@@ -49,11 +49,11 @@ const AboutMe = () => {
               </Typography>
             </div>
             <div className="pt-3">
-              <div className="flex justify-between">
-                <div>
+              <ul className="grid grid-cols-1 xl:grid-cols-2 gap-3">
+                <li>
                   <Typography
                     variant="small"
-                    className="mx-7 font-700 text-highlight"
+                    className=" font-700 text-highlight"
                   >
                     Contact
                   </Typography>
@@ -63,32 +63,33 @@ const AboutMe = () => {
                   >
                     +639298289932
                   </Typography>
-                </div>
-                <div>
+                </li>
+                <li>
                   <Typography
                     variant="small"
-                    className="mx-20 font-700 text-highlight"
+                    className="font-700 text-highlight"
                   >
                     Email
                   </Typography>
                   <Typography variant="small" className="font-400 text-white">
                     ricolittawa030620@gmail.com
                   </Typography>
-                </div>
-              </div>
-              <div className="py-3 text-center">
-                <Typography
-                  variant="small"
-                  className="mx-20 font-700 text-highlight"
-                >
-                  Education
-                </Typography>
-                <Typography variant="small" className="font-400 text-white">
-                  Bachelor Of Science in Information Technology
-                </Typography>
-              </div>
-              <div className="flex justify-center pt-3">
-                <div className="px-5">
+                </li>
+                <li>
+                  <Typography
+                    variant="small"
+                    className="font-700 text-highlight"
+                  >
+                    Education
+                  </Typography>
+                  <Typography variant="small" className="font-400 text-white">
+                    Bachelor Of Science in Information Technology
+                  </Typography>
+                </li>
+              </ul>
+
+              <div className="flex justify-center xl:justify-start pt-3">
+                <div className="">
                   <Link to="https://github.com/RicoLittawa" target="_blank">
                     <img src={GitHub} className="h-10" alt="" />
                   </Link>

@@ -4,10 +4,10 @@ import Navigation from "../Components/Navigation";
 const MainStyleProvider = ({ children }) => {
   return (
     <MainStyleContext.Provider value={{}}>
-      <header className="fixed z-50 w-full bg-[#232323]">
+      <header className="fixed z-50 w-full mx-auto bg-dark lg:bg-[#232323]">
         <Navigation />
       </header>
-      <main className="z-0 pt-20">{children}</main>
+      <main className="z-0 pt-20 w-full mx-auto">{children}</main>
     </MainStyleContext.Provider>
   );
 };

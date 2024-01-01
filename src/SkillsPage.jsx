@@ -34,7 +34,7 @@ const SkillsPage = () => {
     <section className="py-20">
       <ContentMargin>
         <TitleHolder>Skills</TitleHolder>
-        <div className="grid grid-cols-5 gap-3 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-5 gap-3 py-16 place-items-baseline">
           {topics.map((topic, index) => (
             <div key={index}>
               <div className="w-full bg-[#232323]">
