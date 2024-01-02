@@ -71,7 +71,7 @@ const PortfolioPage = () => {
     <section className="bg-dark py-20">
       <ContentMargin>
         <TitleHolder>Portfolio</TitleHolder>
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 py-16">
           {projects.map((project, index) => {
             const [projectName, details] = Object.entries(project)[0];
             const { skills, description } = details || {};

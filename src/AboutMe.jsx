@@ -15,10 +15,10 @@ import { Link } from "react-router-dom";
 
 const AboutMe = () => {
   return (
-    <section className="bg-dark py-20">
+    <section className="bg-dark pt-20">
       <ContentMargin>
         <TitleHolder>About Me</TitleHolder>
-        <div className="flex justify-center xl:justify-between py-16">
+        <div className="flex justify-center py-16 xl:justify-evenly">
           <div className="relative hidden xl:block">
             <div className="square absolute inset-0 left-8 top-14"></div>
             <img
@@ -49,7 +49,7 @@ const AboutMe = () => {
               </Typography>
             </div>
             <div className="pt-3">
-              <ul className="grid grid-cols-1 xl:grid-cols-2 gap-3">
+              <ul className="grid grid-cols-1 gap-3 xl:grid-cols-2">
                 <li>
                   <Typography
                     variant="small"
@@ -88,7 +88,7 @@ const AboutMe = () => {
                 </li>
               </ul>
 
-              <div className="flex justify-center xl:justify-start pt-3">
+              <div className="flex justify-center pt-3 xl:justify-start">
                 <div className="">
                   <Link to="https://github.com/RicoLittawa" target="_blank">
                     <img src={GitHub} className="h-10" alt="" />

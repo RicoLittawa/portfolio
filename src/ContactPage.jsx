@@ -34,8 +34,8 @@ const ContactPage = () => {
     <section className="bg-highlight py-20">
       <ContentMargin>
         <TitleHolder isContactPage={true}>Contact Me</TitleHolder>
-        <div className="flex justify-center py-16">
-          <div className="grid grid-cols-2 lg:grid-cols-1 gap-2">
+        <div className="flex justify-center py-16 xl:justify-evenly">
+          <div className="grid grid-cols-1 gap-2">
             {informations.map((information, infoIndex) => {
               const [infoName, desc] = Object.entries(information)[0];
               const { icon, description } = desc || {};
@@ -55,13 +55,6 @@ const ContactPage = () => {
                 </span>
               );
             })}
-            <div>
-              <Button variant="filled" className="bg-dark">
-                <Typography variant="small" className="font-400 normal-case">
-                  Message me
-                </Typography>
-              </Button>
-            </div>
           </div>
           <div className="hidden lg:block">
             <img src={Contact} alt="" className="w-72" />
