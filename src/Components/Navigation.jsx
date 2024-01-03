@@ -1,7 +1,7 @@
 import React from "react";
 import Logo from "../assets/logo.png";
 import { useEffect, useState } from "react";
-import { Button, Typography } from "@material-tailwind/react";
+import { Button, Typography, Navbar, Collapse } from "@material-tailwind/react";
 const Navigation = () => {
   const [openNav, setOpenNav] = useState(false);
   const pages = [
@@ -33,7 +33,7 @@ const Navigation = () => {
     </ul>
   );
   return (
-    <nav className="mx-auto">
+    <Navbar className="mx-auto max-w-full rounded-none border-0 bg-dark">
       <div className="desktop-view justify-evenly lg:flex">
         <div className="flex justify-between">
           <img src={Logo} className="w-16 cursor-pointer lg:w-20" alt="logo" />
@@ -58,15 +58,10 @@ const Navigation = () => {
         </div>
         <div className="hidden lg:flex">{navlist}</div>
       </div>
-
-      <div
-        className={`mobile-view text-center lg:hidden ${
-          !openNav ? "hidden h-10" : ""
-        }`}
-      >
-        {navlist}
-      </div>
-    </nav>
+      <Collapse open={openNav} className="text-center">
+          {navlist}
+        </Collapse>
+    </Navbar>
   );
 };
 
