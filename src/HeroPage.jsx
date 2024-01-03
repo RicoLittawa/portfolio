@@ -36,7 +36,7 @@ const HeroPage = () => {
     <>
       <section className="py-20">
         <ContentMargin>
-          <div className="hidden lg:justify-evenly xl:justify-between lg:flex">
+          <div className="hidden justify-evenly lg:flex">
             <div className="py-20 lg:py-40">
               <Typography
                 variant="h1"
@@ -58,7 +58,7 @@ const HeroPage = () => {
                 )}
               </Typography>
             </div>
-            <div ref={containerRef} className="hidden w-96 lg:flex"></div>
+            <div ref={containerRef} className="hidden w-80 xl:w-96 lg:flex ml-10"></div>
           </div>
           <div className="flex justify-center lg:justify-evenly py-24 md:py-32 lg:hidden">
             <div className="animate-pulse">
