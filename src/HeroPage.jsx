@@ -4,7 +4,8 @@ import Lottie from "lottie-web";
 import { useEffect, useRef, useState } from "react";
 import AnimatedData from "./assets/Animation - 1703836142406.json";
 import { ContentMargin } from "./Components/ContentComp";
-import Developer from "./assets/developer.svg";
+import { SlideLeft, SlideRight } from "./animations/AnimationComponent";
+import Lines from "./assets/circle2.png";
 
 const HeroPage = () => {
   const containerRef = useRef(null);
@@ -21,71 +22,36 @@ const HeroPage = () => {
     };
   }, []);
 
-  const texts = ["Hello I'm", "I'm a"];
-  const texts2 = ["Rico Littawa", "WEB DEVELOPER"];
-  const [index, setIndex] = useState(0);
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      setIndex((currentIndex) => (currentIndex + 1) % texts.length);
-    }, 7000);
-
-    return () => clearInterval(intervalId);
-  }, []);
-
   return (
-    <>
-      <section className="py-20">
-        <ContentMargin>
-          <div className="hidden justify-evenly lg:flex">
-            <div className="py-20 lg:py-40">
-              <Typography
-                variant="h1"
-                className="first-title text-start font-700 text-lightgray"
-              >
-                {texts[index]}
-              </Typography>
-              <Typography
-                variant="h1"
-                className="second-title text-start font-900 tracking-wide text-white"
-              >
-                {texts2[index] === "WEB DEVELOPER" ? (
-                  <>
-                    {texts2[index]}
-                    <span className="font-900 text-highlight">.</span>
-                  </>
-                ) : (
-                  texts2[index]
-                )}
-              </Typography>
-            </div>
-            <div ref={containerRef} className="hidden w-80 xl:w-96 lg:flex ml-10"></div>
-          </div>
-          <div className="flex justify-center lg:justify-evenly py-24 md:py-32 lg:hidden">
-            <div className="animate-pulse">
-              <Typography
-                variant="h3"
-                className="font-700 tracking-wide text-lightgray"
-              >
-                Hello!
-              </Typography>
-              <Typography
-                variant="h3"
-                className="font-900 tracking-wide text-white indent-1"
-              >
-                I'm a WEB DEVELOPER<span className="text-highlight">.</span>
-              </Typography>
-            </div>
-            <div>
+    <section className="py-20">
+      <ContentMargin>
+        <div className="flex items-center justify-center xl:justify-evenly">
+          <SlideRight>
+            <div className="relative">
               <img
-                src={Developer}
+                src={Lines}
                 alt=""
-                className="hidden h-36 w-96 md:flex"
+                className="absolute inset-0 h-72 max-h-full w-auto max-w-full animate-pulse object-scale-down object-center lg:h-96"
               />
+              <div className="relative z-10 py-20 lg:py-40">
+                <Typography className="text-start font-900 text-3xl text-white lg:text-4xl">
+                  Hey, I'm Rico
+                </Typography>
+                <Typography className="inline text-start font-900 text-3xl tracking-wide text-white lg:text-4xl">
+                  I'm a <span className=" text-red-700">WEB DEVELOPER</span>
+                </Typography>
+              </div>
             </div>
-          </div>
-        </ContentMargin>
-      </section>
-    </>
+          </SlideRight>
+          <SlideLeft>
+            <div
+              ref={containerRef}
+              className="hidden w-80 lg:flex xl:w-96"
+            ></div>
+          </SlideLeft>
+        </div>
+      </ContentMargin>
+    </section>
   );
 };
 

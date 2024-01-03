@@ -17,7 +17,7 @@ const AboutMe = () => {
         <TitleHolder>About Me</TitleHolder>
         <div className="flex justify-center py-16">
           <div className="relative mx-16 hidden xl:block">
-            <div className=" square absolute inset-0 left-5 top-5 h-96 w-full rounded-lg border-4 border-highlight"></div>
+            <div className="absolute inset-0 left-5 top-5 h-96 w-full rounded-lg border-4 border-highlight"></div>
             <div>
               <img
                 src={Profile}
@@ -27,7 +27,7 @@ const AboutMe = () => {
             </div>
           </div>
           <div className="mx-16">
-            <Typography variant="h4" className="pb-3 font-400 text-white">
+            <Typography variant="paragraph" className="pb-3 font-400 text-white">
               My name is{" "}
               <strong className="font-700 text-highlight">Rico Littawa</strong>
             </Typography>
