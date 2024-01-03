@@ -12,12 +12,18 @@ const Navigation = () => {
     "SERVICES",
     "CONTACT",
   ];
+  useEffect(() => {
+    window.addEventListener(
+      "resize",
+      () => window.innerWidth >= 960 && setOpenNav(false),
+    );
+  }, []);
   const navlist = (
     <ul className="my-3 block justify-center p-5 font-semibold text-white lg:flex">
       {pages.map((page, index) => (
         <li
           key={index}
-          className="mx-8 hover:bg-white hover:text-highlight rounded-full lg:hover:bg-[#232323]"
+          className="mx-8 rounded-full hover:bg-white hover:text-highlight lg:hover:bg-[#232323]"
         >
           <Typography variant="h6" className="font-400 md:font-700">
             {page}
@@ -30,11 +36,7 @@ const Navigation = () => {
     <nav className="mx-auto">
       <div className="desktop-view justify-evenly lg:flex">
         <div className="flex justify-between">
-          <img
-            src={Logo}
-            className="w-16 lg:w-20 cursor-pointer"
-            alt="logo"
-          />
+          <img src={Logo} className="w-16 cursor-pointer lg:w-20" alt="logo" />
           <Button
             variant="text"
             onClick={() => setOpenNav(!openNav)}

@@ -19,13 +19,15 @@ const AboutMe = () => {
       <ContentMargin>
         <TitleHolder>About Me</TitleHolder>
         <div className="flex justify-center py-16 xl:justify-evenly">
-          <div className="relative hidden xl:block">
-            <div className="square absolute inset-0 left-8 top-14"></div>
-            <img
-              src={Profile}
-              alt="card-image"
-              className="w-70 relative z-10 h-96 rounded-lg"
-            />
+          <div className="relative mr-10 hidden xl:block">
+            <div className=" square absolute inset-0 left-5 top-5 h-96 w-full rounded-lg border-4 border-highlight"></div>
+            <div>
+              <img
+                src={Profile}
+                alt="card-image"
+                className="relative z-10 h-96 w-full rounded-lg object-cover object-center"
+              />
+            </div>
           </div>
           <div>
             <Typography

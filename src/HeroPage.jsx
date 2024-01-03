@@ -36,7 +36,7 @@ const HeroPage = () => {
     <>
       <section className="py-20">
         <ContentMargin>
-          <div className="hidden justify-between lg:flex">
+          <div className="hidden lg:justify-evenly xl:justify-between lg:flex">
             <div className="py-20 lg:py-40">
               <Typography
                 variant="h1"
