@@ -8,6 +8,9 @@ import {
   faPhone,
   faLocation,
 } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
+import GitHub from "./assets/github.png";
+import LinkedIn from "./assets/linkedin.svg";
 
 const ContactPage = () => {
   let informations = [
@@ -59,7 +62,23 @@ const ContactPage = () => {
           <div className="hidden lg:block">
             <img src={Contact} alt="" className="w-72" />
           </div>
+         
         </div>
+        <div className="flex justify-center pt-3">
+            <div className="px-5">
+              <Link to="https://github.com/RicoLittawa" target="_blank">
+                <img src={GitHub} className="h-10" alt="" />
+              </Link>
+            </div>
+            <div className="px-5">
+              <Link
+                to="https://www.linkedin.com/in/rico-littawa/"
+                target="_blank"
+              >
+                <img src={LinkedIn} className="h-10" alt="" />
+              </Link>
+            </div>
+          </div>
       </ContentMargin>
     </section>
   );

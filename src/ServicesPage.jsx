@@ -44,7 +44,7 @@ const ServicesPage = () => {
                 <li key={index}>
                   <figure>
                     <img
-                      className="h-40 w-96 rounded-lg "
+                      className="h-40 w-full rounded-lg "
                       src={picture}
                       alt={serviceName}
                     />

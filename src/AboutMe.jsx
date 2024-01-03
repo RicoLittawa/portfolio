@@ -9,36 +9,33 @@ import {
   Button,
 } from "@material-tailwind/react";
 import Profile from "./assets/portfolio.jpg";
-import GitHub from "./assets/github.png";
-import LinkedIn from "./assets/linkedin.svg";
-import { Link } from "react-router-dom";
 
 const AboutMe = () => {
   return (
     <section className="bg-dark pt-20">
       <ContentMargin>
         <TitleHolder>About Me</TitleHolder>
-        <div className="flex justify-center py-16 xl:justify-evenly">
-          <div className="relative mr-10 hidden xl:block">
+        <div className="flex justify-center py-16">
+          <div className="relative mx-16 hidden xl:block">
             <div className=" square absolute inset-0 left-5 top-5 h-96 w-full rounded-lg border-4 border-highlight"></div>
             <div>
               <img
                 src={Profile}
                 alt="card-image"
-                className="relative z-10 h-96 w-full rounded-lg object-cover object-center"
+                className="relative z-10 h-96 max-w-max	 rounded-lg object-cover object-center"
               />
             </div>
           </div>
-          <div>
-            <Typography
-              variant="paragraph"
-              className="pb-3 font-400 text-white"
-            >
+          <div className="mx-16">
+            <Typography variant="h4" className="pb-3 font-400 text-white">
               My name is{" "}
               <strong className="font-700 text-highlight">Rico Littawa</strong>
             </Typography>
             <div>
-              <Typography variant="small" className="w-96 font-400 text-white">
+              <Typography
+                variant="small"
+                className="w-96 font-400 text-white"
+              >
                 I am a passionate entry-level web developer skilled in both
                 front-end and back-end development. My expertise includes
                 working with React JS for building dynamic and interactive user
@@ -89,22 +86,6 @@ const AboutMe = () => {
                   </Typography>
                 </li>
               </ul>
-
-              <div className="flex justify-center pt-3 xl:justify-start">
-                <div className="">
-                  <Link to="https://github.com/RicoLittawa" target="_blank">
-                    <img src={GitHub} className="h-10" alt="" />
-                  </Link>
-                </div>
-                <div className="px-5">
-                  <Link
-                    to="https://www.linkedin.com/in/rico-littawa/"
-                    target="_blank"
-                  >
-                    <img src={LinkedIn} className="h-10" alt="" />
-                  </Link>
-                </div>
-              </div>
             </div>
           </div>
         </div>
