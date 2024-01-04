@@ -1,15 +1,7 @@
 import React from "react";
 import { ContentMargin, TitleHolder } from "./Components/ContentComp";
-import {
-  Card,
-  CardHeader,
-  CardBody,
-  CardFooter,
-  Typography,
-  Button,
-} from "@material-tailwind/react";
-import WorkExp from "./WorkExp";
-
+import { Typography } from "@material-tailwind/react";
+import { Reveal } from "./animations/AnimationComponent";
 
 const SkillsPage = () => {
   let webdevSkills = {
@@ -36,24 +28,31 @@ const SkillsPage = () => {
     <section className="py-20">
       <ContentMargin>
         <TitleHolder>Skills</TitleHolder>
-        <div className="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-5 gap-3 py-16 place-items-baseline">
-          {topics.map((topic, index) => (
-            <div key={index}>
-              <div className="w-full bg-[#232323]">
-                <Typography variant="h5" className="mb-2 font-700 text-highlight">
-                  {topic}
-                </Typography>
-                <ul className="list-disc text-highlight ml-6">
-                  {(webdevSkills[topic] ?? []).map((skill, index) => (
-                    <li key={index}>
-                      <Typography className="text-white font-400">{skill}</Typography>
-                    </li>
-                  ))}
-                </ul>
+        <Reveal>
+          <div className="grid grid-cols-1 place-items-baseline gap-3 py-16 md:grid-cols-3 xl:grid-cols-5">
+            {topics.map((topic, index) => (
+              <div key={index}>
+                <div className="w-full bg-[#232323]">
+                  <Typography
+                    variant="h5"
+                    className="mb-2 font-700 text-highlight"
+                  >
+                    {topic}
+                  </Typography>
+                  <ul className="ml-6 list-disc text-highlight">
+                    {(webdevSkills[topic] ?? []).map((skill, index) => (
+                      <li key={index}>
+                        <Typography className="font-400 text-white">
+                          {skill}
+                        </Typography>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        </Reveal>
       </ContentMargin>
     </section>
   );
