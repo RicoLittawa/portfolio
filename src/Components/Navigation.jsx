@@ -19,7 +19,7 @@ const Navigation = () => {
     );
   }, []);
   const navlist = (
-    <ul className="my-3 block justify-center p-5 font-semibold text-white lg:flex">
+    <ul className="block items-center justify-center p-4 font-semibold text-white lg:flex">
       {pages.map((page, index) => (
         <li
           key={index}
@@ -33,8 +33,8 @@ const Navigation = () => {
     </ul>
   );
   return (
-    <Navbar className="mx-auto max-w-full rounded-none border-0 bg-dark">
-      <div className="desktop-view justify-evenly lg:flex">
+    <Navbar className="mx-auto max-w-full rounded-none border-0 bg-dark lg:bg-[#232323]">
+      <div className="justify-evenly lg:flex">
         <div className="flex justify-between">
           <img src={Logo} className="w-16 cursor-pointer lg:w-20" alt="logo" />
           <Button
@@ -59,8 +59,8 @@ const Navigation = () => {
         <div className="hidden lg:flex">{navlist}</div>
       </div>
       <Collapse open={openNav} className="text-center">
-          {navlist}
-        </Collapse>
+        {navlist}
+      </Collapse>
     </Navbar>
   );
 };

@@ -23,7 +23,7 @@ const HeroPage = () => {
   }, []);
 
   return (
-    <section className="pb-20">
+    <section className="py-40">
       <ContentMargin>
         <div className="flex items-center justify-center xl:justify-evenly">
           <SlideRight>

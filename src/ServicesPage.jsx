@@ -36,7 +36,7 @@ const ServicesPage = () => {
           <Typography variant="h3" className="font-700 text-white">
             What I can offer?
           </Typography>
-          <ul className="grid grid-cols-1 lg:grid-cols-3 gap-3 place-items-center pt-5 text-center">
+          <ul className="grid grid-cols-1 place-items-center gap-3 pt-5 text-center lg:grid-cols-3">
             {services.map((service, index) => {
               const [serviceName, content] = Object.entries(service)[0];
               const { picture, description } = content || {};

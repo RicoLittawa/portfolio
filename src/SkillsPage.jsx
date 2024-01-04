@@ -8,6 +8,8 @@ import {
   Typography,
   Button,
 } from "@material-tailwind/react";
+import WorkExp from "./WorkExp";
+
 
 const SkillsPage = () => {
   let webdevSkills = {
