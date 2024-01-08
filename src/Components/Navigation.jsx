@@ -2,15 +2,28 @@ import React from "react";
 import Logo from "../assets/logo.png";
 import { useEffect, useState } from "react";
 import { Button, Typography, Navbar, Collapse } from "@material-tailwind/react";
+import { Link } from "react-scroll";
 const Navigation = () => {
   const [openNav, setOpenNav] = useState(false);
   const pages = [
-    "HOME",
-    "ABOUT ME",
-    "SKILLS",
-    "PORTFOLIO",
-    "SERVICES",
-    "CONTACT",
+    {
+      HOME: "/",
+    },
+    {
+      "ABOUT ME": "about-me",
+    },
+    {
+      SKILLS: "skills",
+    },
+    {
+      PORTFOLIO: "portfolio",
+    },
+    {
+      SERVICES: "service",
+    },
+    {
+      CONTACT: "contact",
+    },
   ];
   useEffect(() => {
     window.addEventListener(
@@ -20,16 +33,27 @@ const Navigation = () => {
   }, []);
   const navlist = (
     <ul className="block items-center justify-center p-4 font-semibold text-white lg:flex">
-      {pages.map((page, index) => (
-        <li
-          key={index}
-          className="mx-8 rounded-full hover:bg-white hover:text-highlight lg:hover:bg-[#232323]"
-        >
-          <Typography variant="h6" className="font-400 md:font-700">
-            {page}
-          </Typography>
-        </li>
-      ))}
+      {pages.map((page, index) => {
+        const [p,paths] = Object.entries(page)[0];
+        return (
+          <li
+            key={index}
+            className="mx-8 rounded-full hover:bg-white hover:text-highlight lg:hover:bg-[#232323]"
+          >
+            <Link
+              to={paths}
+              spy={true}
+              smooth={true}
+              offset={50}
+              duration={500}
+            >
+              <Typography variant="h6" className="font-400 md:font-700">
+                {p}
+              </Typography>
+            </Link>
+          </li>
+        );
+      })}
     </ul>
   );
   return (
@@ -43,16 +67,18 @@ const Navigation = () => {
             className=" lg:hidden"
           >
             <svg
-              className="h-6 w-6 text-white"
-              x-show="! showMenu"
+              xmlns="http://www.w3.org/2000/svg"
               fill="none"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              viewBox="0 00 24 24"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
               stroke="currentColor"
+              className="h-8 w-8 text-white"
             >
-              <path d="m4 6h16M4 12h16M4 18h16"></path>
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+              />
             </svg>
           </Button>
         </div>

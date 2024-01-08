@@ -6,7 +6,6 @@ import { Reveal } from "./animations/AnimationComponent";
 
 const AboutMe = () => {
   return (
-    <section className="bg-dark py-20">
       <ContentMargin>
         <TitleHolder>About Me</TitleHolder>
         <div className="flex items-center justify-center py-16">
@@ -93,7 +92,6 @@ const AboutMe = () => {
           </Reveal>
         </div>
       </ContentMargin>
-    </section>
   );
 };
 

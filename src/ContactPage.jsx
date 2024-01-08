@@ -11,6 +11,7 @@ import {
 import { Link } from "react-router-dom";
 import GitHub from "./assets/github.png";
 import LinkedIn from "./assets/linkedin.svg";
+import { Reveal } from "./animations/AnimationComponent";
 
 const ContactPage = () => {
   let informations = [
@@ -34,9 +35,9 @@ const ContactPage = () => {
     },
   ];
   return (
-    <section className="bg-highlight py-20">
       <ContentMargin>
         <TitleHolder isContactPage={true}>Contact Me</TitleHolder>
+        <Reveal>
         <div className="flex justify-center py-16 xl:justify-evenly">
           <div className="grid grid-cols-1 gap-2">
             {informations.map((information, infoIndex) => {
@@ -79,8 +80,8 @@ const ContactPage = () => {
               </Link>
             </div>
           </div>
+          </Reveal>
       </ContentMargin>
-    </section>
   );
 };
 

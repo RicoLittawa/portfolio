@@ -25,11 +25,10 @@ const SkillsPage = () => {
     "Editing & Design",
   ];
   return (
-    <section className="py-20">
       <ContentMargin>
         <TitleHolder>Skills</TitleHolder>
         <Reveal>
-          <div className="grid grid-cols-1 place-items-baseline gap-3 py-16 md:grid-cols-3 xl:grid-cols-5">
+          <div className="grid grid-cols-1 place-items-start lg:place-items-baseline gap-3 py-16 md:grid-cols-3 xl:grid-cols-5">
             {topics.map((topic, index) => (
               <div key={index}>
                 <div className="w-full bg-[#232323]">
@@ -54,7 +53,6 @@ const SkillsPage = () => {
           </div>
         </Reveal>
       </ContentMargin>
-    </section>
   );
 };
 

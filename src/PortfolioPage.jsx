@@ -14,7 +14,7 @@ import Drum from "./assets/DrumMachine.png";
 import Quote from "./assets/Quote.png";
 import Inventory from "./assets/Inventory.png";
 import Movie from "./assets/Movie.png";
-
+import { Reveal } from "./animations/AnimationComponent";
 const PortfolioPage = () => {
   let projects = [
     {
@@ -68,52 +68,55 @@ const PortfolioPage = () => {
     "Movie Reservation App": Movie,
   };
   return (
-    <section className="bg-dark py-20">
       <ContentMargin>
         <TitleHolder>Portfolio</TitleHolder>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 py-16">
-          {projects.map((project, index) => {
-            const [projectName, details] = Object.entries(project)[0];
-            const { skills, description } = details || {};
-            return (
-              <Card
-                className="mt-6 h-full w-full bg-dark outline outline-highlight"
-                key={index}
-              >
-                <CardBody>
-                  <img
-                    src={picture[projectName]}
-                    alt=""
-                    className="h-60 w-full rounded-lg object-cover object-center shadow-md shadow-red-600 hidden lg:block"
-                  />
-                  <Typography variant="h5" className="mt-5 font-700 text-white">
-                    {projectName}
-                  </Typography>
-                  <Typography variant="small" className="font-400">
-                    {description}
-                  </Typography>
-                  <div className="ml-3">
-                    <ul className="mt-3 grid list-disc grid-cols-3 gap-1">
-                      {skills &&
-                        skills.map((skill, index) => (
-                          <li key={index}>
-                            <Typography
-                              variant="small"
-                              className="font-400 text-highlight"
-                            >
-                              {skill}
-                            </Typography>
-                          </li>
-                        ))}
-                    </ul>
-                  </div>
-                </CardBody>
-              </Card>
-            );
-          })}
-        </div>
+        <Reveal>
+          <div className="grid grid-cols-1 gap-5 py-16 md:grid-cols-2 lg:grid-cols-3">
+            {projects.map((project, index) => {
+              const [projectName, details] = Object.entries(project)[0];
+              const { skills, description } = details || {};
+              return (
+                <Card
+                  className="mt-6 h-full w-full bg-dark outline outline-highlight"
+                  key={index}
+                >
+                  <CardBody>
+                    <img
+                      src={picture[projectName]}
+                      alt=""
+                      className="hidden h-60 w-full rounded-lg object-cover object-center shadow-md shadow-red-600 lg:block"
+                    />
+                    <Typography
+                      variant="h5"
+                      className="mt-5 font-700 text-white"
+                    >
+                      {projectName}
+                    </Typography>
+                    <Typography variant="small" className="font-400">
+                      {description}
+                    </Typography>
+                    <div className="ml-3">
+                      <ul className="mt-3 grid list-disc grid-cols-1 lg:grid-cols-3 gap-1">
+                        {skills &&
+                          skills.map((skill, index) => (
+                            <li key={index}>
+                              <Typography
+                                variant="small"
+                                className="font-400 text-highlight"
+                              >
+                                {skill}
+                              </Typography>
+                            </li>
+                          ))}
+                      </ul>
+                    </div>
+                  </CardBody>
+                </Card>
+              );
+            })}
+          </div>
+        </Reveal>
       </ContentMargin>
-    </section>
   );
 };
 

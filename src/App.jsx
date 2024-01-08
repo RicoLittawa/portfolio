@@ -1,31 +1,16 @@
 import "./App.css";
-import {
-  Route,
-  Routes,
-  RouterProvider,
-  createBrowserRouter,
-} from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HomePage from "./HomePage";
-import ContactPage from "./ContactPage";
-const router = createBrowserRouter([
-  {
-    path: "/",
-    Component: HomePage,
-  },
-  {
-    path: "*",
-    Component: Root,
-  },
-]);
-export default function App() {
-  return <RouterProvider router={router}></RouterProvider>;
-}
-
-function Root() {
+function App() {
   return (
-    <Routes>
-      <Route path="" element={{}}></Route>
-      <Route path="/contact" element={{ ContactPage }}></Route>
-    </Routes>
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<HomePage />}></Route>
+        </Routes>
+      </BrowserRouter>
+    </>
   );
 }
+
+export default App;
