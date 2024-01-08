@@ -69,7 +69,7 @@ const Navigation = () => {
               to={paths}
               spy={true}
               smooth={true}
-              offset={-200}
+              offset={-50}
               duration={500}
               
               onClick={() => setOpenNav(!openNav)}
