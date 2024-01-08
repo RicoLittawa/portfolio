@@ -85,7 +85,7 @@ const Navigation = () => {
     </ul>
   );
   return (
-    <Navbar className="sticky z-50 mx-auto h-max max-w-full rounded-none border-0 bg-dark lg:bg-[#232323]">
+    <Navbar className="fixed z-50 mx-auto h-max max-w-full rounded-none border-0 bg-dark lg:bg-[#232323]">
       <div className="justify-evenly lg:flex">
         <div className="flex justify-between">
           <img src={Logo} className="w-16 cursor-pointer lg:w-20" alt="logo" />
