@@ -98,7 +98,7 @@ const PortfolioPage = () => {
                     {description}
                   </Typography>
                   <div>
-                    <ul className="mt-3 grid list-disc grid-cols-1 gap-1 lg:grid-cols-3">
+                    <ul className="mt-3 ml-4 grid list-disc grid-cols-1 gap-1 lg:grid-cols-3">
                       {skills &&
                         skills.map((skill, index) => (
                           <li key={index}>
