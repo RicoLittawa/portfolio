@@ -34,10 +34,7 @@ const WorkExp = () => {
                   I possess proficiency in JavaScript, HTML, and CSS. During my
                   previous internship, I served as a frontend developer, where I
                   gained hands-on experience with technologies such as Node.js,
-                  Vue.js, and the Quasar framework at Pixel8. While my
-                  internship focused on frontend development, I also have a
-                  background in backend development, having utilized PHP to
-                  create our college capstone project. My professional journey
+                  Vue.js, and the Quasar framework at Pixel8. My professional journey
                   has equipped me with a comprehensive skill set, including
                   using Axios to fetch data from APIs. Additionally, I have
                   ventured into quality assurance, taking on the role of a
