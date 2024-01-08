@@ -17,6 +17,10 @@
 :root {
   background-color: #232323;
 }
+body {
+  margin: 0;
+  max-height: auto;
+}
 
 
 

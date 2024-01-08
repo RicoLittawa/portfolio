@@ -5,11 +5,11 @@ import { useEffect, useRef } from "react";
 const Reveal = ({ children }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
-  const mainControls= useAnimation()
+  const mainControls = useAnimation();
 
   useEffect(() => {
-    if (isInView){
-      mainControls.start("visible")
+    if (isInView) {
+      mainControls.start("visible");
     }
   }, [isInView]);
   return (

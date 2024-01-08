@@ -1,5 +1,5 @@
 import React from "react";
-import { ContentMargin, TitleHolder } from "./Components/ContentComp";
+import { TitleHolder } from "./Components/ContentComp";
 import { Typography } from "@material-tailwind/react";
 import Code from "./assets/code.svg";
 import Edit from "./assets/edit.svg";
@@ -30,11 +30,11 @@ const ServicesPage = () => {
     },
   ];
   return (
-      <ContentMargin>
+      <div className="px-20">
         <TitleHolder>Services</TitleHolder>
         <Reveal>
           <div className="py-16">
-            <Typography variant="h3" className="font-700 text-white">
+            <Typography variant="h3" className="font-700 text-white text-xl md:text-3xl lg:text-4xl">
               What I can offer?
             </Typography>
             <ul className="grid grid-cols-1 place-items-center gap-8 lg:gap-3 pt-5 text-center lg:grid-cols-3">
@@ -70,7 +70,7 @@ const ServicesPage = () => {
             </ul>
           </div>
         </Reveal>
-      </ContentMargin>
+      </div>
   );
 };
 

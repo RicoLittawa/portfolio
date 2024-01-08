@@ -1,5 +1,5 @@
 import React from "react";
-import { ContentMargin, TitleHolder } from "./Components/ContentComp";
+import { TitleHolder } from "./Components/ContentComp";
 import {
   Timeline,
   TimelineItem,
@@ -13,7 +13,7 @@ import {
 const WorkExp = () => {
   return (
     <section className="py-20">
-      <ContentMargin>
+      <>
           <div className="w-full xl:w-[32rem]">
             <Timeline>
               <TimelineItem>
@@ -44,7 +44,7 @@ const WorkExp = () => {
               </TimelineItem>
             </Timeline>
           </div>
-      </ContentMargin>
+      </>
     </section>
   );
 };
