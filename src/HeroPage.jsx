@@ -23,21 +23,19 @@ const HeroPage = () => {
   }, []);
 
   return (
-    <>
-      <>
-        <div className="flex items-center justify-center xl:justify-evenly">
+        <div className="flex items-center justify-center xl:justify-evenly px-20">
           <SlideRight>
             <div className="relative">
               <img
                 src={Lines}
                 alt=""
-                className="absolute inset-0 h-72 max-h-full w-auto max-w-full animate-pulse object-scale-down object-center lg:h-96"
+                className="absolute inset-0 h-72 w-full animate-pulse object-scale-down object-center lg:h-96"
               />
               <div className="relative z-10 py-20 lg:py-40">
-                <Typography className="text-start font-900 text-3xl text-white lg:text-4xl">
+                <Typography className="text-center lg:text-start font-900 text-3xl text-white lg:text-4xl">
                   Hey, I'm Rico
                 </Typography>
-                <Typography className="inline text-start font-900 text-3xl tracking-wide text-white lg:text-4xl">
+                <Typography className="lg:inline text-center lg:text-start font-900 text-3xl tracking-wide text-white lg:text-4xl">
                   I'm a <span className=" text-red-700">WEB DEVELOPER</span>
                 </Typography>
               </div>
@@ -50,8 +48,6 @@ const HeroPage = () => {
             ></div>
           </SlideLeft>
         </div>
-      </>
-    </>
   );
 };
 

@@ -35,7 +35,7 @@ const ContactPage = () => {
     },
   ];
   return (
-    <>
+    <div className="px-20">
       <TitleHolder isContactPage={true}>Contact Me</TitleHolder>
       <Reveal>
         <div className="flex justify-center py-16 xl:justify-evenly">
@@ -49,8 +49,7 @@ const ContactPage = () => {
                     variant="paragraph"
                     className="font-700 text-white"
                   >
-                    {" "}
-                    <FontAwesomeIcon icon={icon} className="mr-2" />
+                    <FontAwesomeIcon icon={icon} className="mr-3"/>
                     {infoName}
                   </Typography>
                   <Typography variant="small" className="font-400 text-white">
@@ -80,7 +79,7 @@ const ContactPage = () => {
           </div>
         </div>
       </Reveal>
-    </>
+    </div>
   );
 };
 

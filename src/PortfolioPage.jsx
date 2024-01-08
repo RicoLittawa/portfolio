@@ -68,7 +68,7 @@ const PortfolioPage = () => {
     "Movie Reservation App": Movie,
   };
   return (
-    <>
+    <div className="px-20">
       <TitleHolder>Portfolio</TitleHolder>
       <Reveal>
         <div className="grid grid-cols-1 gap-5 py-16 md:grid-cols-2 lg:grid-cols-3">
@@ -77,7 +77,7 @@ const PortfolioPage = () => {
             const { skills, description, link } = details || {};
             return (
               <Card
-                className="mt-6 h-full max-w-full bg-dark outline outline-highlight"
+                className="mt-6 h-full w-full bg-dark outline outline-highlight"
                 key={index}
               >
                 <CardBody>
@@ -97,7 +97,7 @@ const PortfolioPage = () => {
                   <Typography variant="small" className="font-400">
                     {description}
                   </Typography>
-                  <div className="ml-3">
+                  <div>
                     <ul className="mt-3 grid list-disc grid-cols-1 gap-1 lg:grid-cols-3">
                       {skills &&
                         skills.map((skill, index) => (
@@ -118,7 +118,7 @@ const PortfolioPage = () => {
           })}
         </div>
       </Reveal>
-    </>
+    </div>
   );
 };
 

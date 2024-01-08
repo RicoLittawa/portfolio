@@ -32,13 +32,13 @@ const Navigation = () => {
     );
   }, []);
   const navlist = (
-    <ul className="block items-center justify-center p-4 font-semibold text-white lg:flex">
+    <ul className="flex flex-col gap-2 p-4 font-semibold text-white lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-10">
       {pages.map((page, index) => {
-        const [p,paths] = Object.entries(page)[0];
+        const [p, paths] = Object.entries(page)[0];
         return (
           <li
             key={index}
-            className="mx-8 rounded-full hover:bg-white hover:text-highlight lg:hover:bg-[#232323]"
+            className="rounded-full hover:bg-white hover:text-highlight lg:hover:bg-[#232323]"
           >
             <Link
               to={paths}
@@ -56,10 +56,38 @@ const Navigation = () => {
       })}
     </ul>
   );
+  const mobileNavList = (
+    <ul className="flex flex-col gap-2 p-4 font-semibold text-white lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-10">
+      {pages.map((page, index) => {
+        const [p, paths] = Object.entries(page)[0];
+        return (
+          <li
+            key={index}
+            className="rounded-full hover:bg-white hover:text-highlight lg:hover:bg-[#232323]"
+          >
+            <Link
+              to={paths}
+              spy={true}
+              smooth={true}
+              offset={-200}
+              duration={500}
+              
+              onClick={() => setOpenNav(!openNav)}
+
+            >
+              <Typography variant="h6" className="font-400 md:font-700">
+                {p}
+              </Typography>
+            </Link>
+          </li>
+        );
+      })}
+    </ul>
+  );
   return (
-    <Navbar className="mx-auto max-w-full rounded-none border-0 bg-dark lg:bg-[#232323]">
+    <Navbar className="sticky z-50 mx-auto h-max max-w-full rounded-none border-0 bg-dark lg:bg-[#232323]">
       <div className="justify-evenly lg:flex">
-        <div className="flex justify-between lg:justify-between">
+        <div className="flex justify-between">
           <img src={Logo} className="w-16 cursor-pointer lg:w-20" alt="logo" />
           <Button
             variant="text"
@@ -85,7 +113,7 @@ const Navigation = () => {
         <div className="hidden lg:flex">{navlist}</div>
       </div>
       <Collapse open={openNav} className="text-center">
-        {navlist}
+        {mobileNavList}
       </Collapse>
     </Navbar>
   );

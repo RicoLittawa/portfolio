@@ -4,10 +4,10 @@ import Navigation from "../Components/Navigation";
 const MainStyleProvider = ({ children }) => {
   return (
     <MainStyleContext.Provider value={{}}>
-      <header className="sticky z-50 mx-auto">
+      <header className=" ">
         <Navigation />
       </header>
-      <main className="z-0 pt-20 mx-auto">{children}</main>
+      <main className="z-0 pt-20">{children}</main>
     </MainStyleContext.Provider>
   );
 };
