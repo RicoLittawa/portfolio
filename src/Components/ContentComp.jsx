@@ -2,9 +2,6 @@ import React from "react";
 import { Typography } from "@material-tailwind/react";
 import { Reveal } from "../animations/AnimationComponent";
 
-const ContentMargin = ({ children }) => {
-  return <div className="mx-40">{children}</div>;
-};
 
 const TitleHolder = ({ children, isContactPage }) => {
   return (
@@ -20,4 +17,4 @@ const TitleHolder = ({ children, isContactPage }) => {
     </Reveal>
   );
 };
-export { ContentMargin, TitleHolder };
+export { TitleHolder };

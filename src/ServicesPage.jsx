@@ -1,5 +1,5 @@
 import React from "react";
-import { ContentMargin, TitleHolder } from "./Components/ContentComp";
+import { TitleHolder } from "./Components/ContentComp";
 import { Typography } from "@material-tailwind/react";
 import Code from "./assets/code.svg";
 import Edit from "./assets/edit.svg";
@@ -30,7 +30,7 @@ const ServicesPage = () => {
     },
   ];
   return (
-      <ContentMargin>
+      <>
         <TitleHolder>Services</TitleHolder>
         <Reveal>
           <div className="py-16">
@@ -70,7 +70,7 @@ const ServicesPage = () => {
             </ul>
           </div>
         </Reveal>
-      </ContentMargin>
+      </>
   );
 };
 

@@ -1,5 +1,5 @@
 import React from "react";
-import { ContentMargin, TitleHolder } from "./Components/ContentComp";
+import { TitleHolder } from "./Components/ContentComp";
 import { Typography } from "@material-tailwind/react";
 import { Reveal } from "./animations/AnimationComponent";
 
@@ -25,7 +25,7 @@ const SkillsPage = () => {
     "Editing & Design",
   ];
   return (
-      <ContentMargin>
+      <>
         <TitleHolder>Skills</TitleHolder>
         <Reveal>
           <div className="grid grid-cols-1 place-items-start lg:place-items-baseline gap-3 py-16 md:grid-cols-3 xl:grid-cols-5">
@@ -52,7 +52,7 @@ const SkillsPage = () => {
             ))}
           </div>
         </Reveal>
-      </ContentMargin>
+      </>
   );
 };
 

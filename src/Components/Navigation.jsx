@@ -59,7 +59,7 @@ const Navigation = () => {
   return (
     <Navbar className="mx-auto max-w-full rounded-none border-0 bg-dark lg:bg-[#232323]">
       <div className="justify-evenly lg:flex">
-        <div className="flex justify-between">
+        <div className="flex justify-between lg:justify-between">
           <img src={Logo} className="w-16 cursor-pointer lg:w-20" alt="logo" />
           <Button
             variant="text"

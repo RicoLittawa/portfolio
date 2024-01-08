@@ -1,6 +1,6 @@
 import React from "react";
-import { ContentMargin, TitleHolder } from "./Components/ContentComp";
-import { Typography, Button } from "@material-tailwind/react";
+import { TitleHolder } from "./Components/ContentComp";
+import { Typography } from "@material-tailwind/react";
 import Contact from "./assets/contact.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -35,9 +35,9 @@ const ContactPage = () => {
     },
   ];
   return (
-      <ContentMargin>
-        <TitleHolder isContactPage={true}>Contact Me</TitleHolder>
-        <Reveal>
+    <>
+      <TitleHolder isContactPage={true}>Contact Me</TitleHolder>
+      <Reveal>
         <div className="flex justify-center py-16 xl:justify-evenly">
           <div className="grid grid-cols-1 gap-2">
             {informations.map((information, infoIndex) => {
@@ -63,25 +63,24 @@ const ContactPage = () => {
           <div className="hidden lg:block">
             <img src={Contact} alt="" className="w-72" />
           </div>
-         
         </div>
         <div className="flex justify-center pt-3">
-            <div className="px-5">
-              <Link to="https://github.com/RicoLittawa" target="_blank">
-                <img src={GitHub} className="h-10" alt="" />
-              </Link>
-            </div>
-            <div className="px-5">
-              <Link
-                to="https://www.linkedin.com/in/rico-littawa/"
-                target="_blank"
-              >
-                <img src={LinkedIn} className="h-10" alt="" />
-              </Link>
-            </div>
+          <div className="px-5">
+            <Link to="https://github.com/RicoLittawa" target="_blank">
+              <img src={GitHub} className="h-10" alt="" />
+            </Link>
           </div>
-          </Reveal>
-      </ContentMargin>
+          <div className="px-5">
+            <Link
+              to="https://www.linkedin.com/in/rico-littawa/"
+              target="_blank"
+            >
+              <img src={LinkedIn} className="h-10" alt="" />
+            </Link>
+          </div>
+        </div>
+      </Reveal>
+    </>
   );
 };
 

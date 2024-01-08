@@ -1,9 +1,9 @@
 import React from "react";
 import { Typography } from "@material-tailwind/react";
 import Lottie from "lottie-web";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import AnimatedData from "./assets/Animation - 1703836142406.json";
-import { ContentMargin } from "./Components/ContentComp";
+import {  } from "./Components/ContentComp";
 import { SlideLeft, SlideRight } from "./animations/AnimationComponent";
 import Lines from "./assets/circle2.png";
 
@@ -24,7 +24,7 @@ const HeroPage = () => {
 
   return (
     <>
-      <ContentMargin>
+      <>
         <div className="flex items-center justify-center xl:justify-evenly">
           <SlideRight>
             <div className="relative">
@@ -50,7 +50,7 @@ const HeroPage = () => {
             ></div>
           </SlideLeft>
         </div>
-      </ContentMargin>
+      </>
     </>
   );
 };
