@@ -3,7 +3,6 @@ import { Typography } from "@material-tailwind/react";
 import Lottie from "lottie-web";
 import { useEffect, useRef } from "react";
 import AnimatedData from "./assets/Animation - 1703836142406.json";
-import {  } from "./Components/ContentComp";
 import { SlideLeft, SlideRight } from "./animations/AnimationComponent";
 import Lines from "./assets/circle2.png";
 
