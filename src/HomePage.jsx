@@ -10,7 +10,7 @@ import ContactPage from "./ContactPage";
 const HomePage = () => {
   return (
     <MainStyleProvider>
-      <section id="/" className=" py-36 lg:py-44">
+      <section id="/" className="py-44">
         <HeroPage />
       </section>
       <section id="about-me" className="bg-dark py-20">
