@@ -23,7 +23,7 @@ const WorkExp = () => {
                 <TimelineIcon className="bg-highlight" />
                 <Typography
                   variant="h6"
-                  className="font-600 leading-none text-white track-wide lg:text-2xl"
+                  className="font-600 leading-none text-white track-wide lg:text-lg xl:text-xl"
                 >
                   Front-end Developer Intern at Pixel8 Web Solutions &
                   Consultancy Inc
