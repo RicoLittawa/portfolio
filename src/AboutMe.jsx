@@ -62,7 +62,7 @@ const AboutMe = () => {
                 {contactDetails.map((contacts, index) => {
                   const [contact, details] = Object.entries(contacts)[0];
                   return (
-                    <li className="py-1">
+                    <li className="py-1" key={index}>
                       <Typography
                         variant="small"
                         className=" font-700 text-highlight"
