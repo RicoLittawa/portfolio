@@ -1,7 +1,7 @@
 import React from "react";
 import { TitleHolder } from "./Components/ContentComp";
 import { Card, CardBody, Typography } from "@material-tailwind/react";
-import TaskTracker from "./assets/tasktracker.png";
+import TaskTracker from "./assets/TaskTracker.png";
 import MarkDown from "./assets/MarkDown.png";
 import Drum from "./assets/DrumMachine.png";
 import Quote from "./assets/Quote.png";
