@@ -33,16 +33,22 @@ const Navigation = () => {
   }, []);
 
   const [offsetValue, setOffsetValue] = useState(0);
+  const handleResize = () => {
+    if (window.innerWidth >= 960) {
+      setOffsetValue(-70); // Change the offset value according to your needs
+    } else if (window.innerWidth <= 680) {
+      setOffsetValue(-100); // Adjust the offset value for smaller screens
+    } else {
+      setOffsetValue(50); // Default offset value for other screen sizes
+    }
+  };
+
   useEffect(() => {
-    window.addEventListener("resize", () => {
-      if (window.innerWidth >= 960) {
-        setOffsetValue((prev) => (prev = -90));
-      } else if (window.innerWidth <= 680) {
-        setOffsetValue((prev) => (prev = -200));
-      } else {
-        setOffsetValue((prev) => (prev = 50));
-      }
-    });
+    handleResize(); // Initial load
+
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
   console.log(offsetValue);
 
