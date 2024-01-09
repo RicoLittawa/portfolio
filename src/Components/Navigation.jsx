@@ -31,6 +31,22 @@ const Navigation = () => {
       () => window.innerWidth >= 960 && setOpenNav(false),
     );
   }, []);
+
+  const [offsetValue, setOffsetValue] = useState(0);
+  useEffect(() => {
+    window.addEventListener("resize", () => {
+      if (window.innerWidth >= 960) {
+        setOffsetValue((prev) => (prev = -90));
+      } else if (window.innerWidth <= 680) {
+        setOffsetValue((prev) => (prev = -200));
+      } else {
+        setOffsetValue((prev) => (prev = 50));
+      }
+    });
+  }, []);
+  console.log(offsetValue);
+
+  //Fix scrolling on different devices
   const navlist = (
     <ul className="flex flex-col gap-2 p-4 font-semibold text-white lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-10">
       {pages.map((page, index) => {
@@ -44,7 +60,7 @@ const Navigation = () => {
               to={paths}
               spy={true}
               smooth={true}
-              offset={50}
+              offset={offsetValue}
               duration={500}
             >
               <Typography variant="h6" className="font-400 md:font-700">
@@ -69,11 +85,9 @@ const Navigation = () => {
               to={paths}
               spy={true}
               smooth={true}
-              offset={-50}
+              offset={offsetValue}
               duration={500}
-              
               onClick={() => setOpenNav(!openNav)}
-
             >
               <Typography variant="h6" className="font-400 md:font-700">
                 {p}
